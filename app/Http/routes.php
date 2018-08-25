@@ -115,3 +115,6 @@ Route::group(['middleware' => ['web']], function () {
  * 数据库student路由
  */
 Route::get('testStudent','StudentController@test1');
+Route::get('query1','StudentController@query1');
+Route::get('query2','StudentController@query2');
+Route::get('query3','StudentController@query3');
