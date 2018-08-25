@@ -110,3 +110,8 @@ Route::get('memberInfo/memberInfo','MemberInfoController@memberInfo');
 Route::group(['middleware' => ['web']], function () {
     //
 });
+
+/**
+ * 数据库student路由
+ */
+Route::get('testStudent','StudentController@test1');
