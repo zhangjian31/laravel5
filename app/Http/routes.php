@@ -14,11 +14,68 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('hellow', function () {
-    return 'hellow';
+/**
+ * 基础路由
+ */
+Route::get('getTest', function () {
+    return 'getTest';
+});
+Route::post('postTest', function () {
+    return 'postTest';
 });
 
+/**
+ *多请求路由
+ */
+Route::match(['get', 'post'], 'matchTest', function () {
+    return 'matchTest';
+});
+Route::any('anyTest', function () {
+    return 'anyTest';
+});
+/**
+ *
+ * 路由参数
+ */
+Route::get('getParamsTest/{id}', function ($id) {
+    return 'getParamsTest-' . $id;
+});
+Route::get('getUser/{name?}', function ($name = null) {
+    return 'getUser-' . $name;
+});
+Route::get('getUser2/{name?}', function ($name = 'xiaoming') {
+    return 'getUser-' . $name;
+})->where('name', '[0-9A-Za-z]+');
+
+Route::get('getUser3/{id}/{name?}', function ($id, $name = 'xiaoming') {
+    return 'getUser-ID=' . $id . ' Name=' . $name;
+})->where(['id' => '[0-9]+', 'name' => '[A-Za-z]+']);
+
+/**
+ * 路由别名
+ * 主要用图在其他地方可以直接使用route('center')调用，不用关心这个路由地址怎么变化
+ */
+Route::get('user/member_center', ['as' => 'center', function ($name = null) {
+    return route('center');
+}]);
+/**
+ * 路由群组和路由前缀
+ */
+
+Route::group(['prefix' => 'member'], function () {
+    Route::get('getTest', function () {
+        return 'prefix-getTest';
+    });
+    Route::any('anyTest', function () {
+        return 'prefix-anyTest';
+    });
+});
+/**
+ * 输出试图
+ */
+Route::get('myview', function () {
+    return view('welcome');
+});
 /*
 |--------------------------------------------------------------------------
 | Application Routes
