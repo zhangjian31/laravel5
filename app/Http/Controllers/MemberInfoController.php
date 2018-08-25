@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
+use App\Member;
 
 /**
  * Created by PhpStorm.
@@ -24,9 +25,11 @@ class  MemberInfoController extends Controller{
 
     public function memberInfo(){
 //        return view('member_info');
-        return view('member/info',[
-            'name'=>'zhangsan',
-            'age'=>20
-        ]);
+
+        return Member::getMember();
+//        return view('member/info',[
+//            'name'=>'zhangsan',
+//            'age'=>20
+//        ]);
     }
 }
