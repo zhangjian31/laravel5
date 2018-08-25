@@ -76,6 +76,14 @@ Route::group(['prefix' => 'member'], function () {
 Route::get('myview', function () {
     return view('welcome');
 });
+
+/**
+ * 访问控制器
+ */
+Route::get('memberAPi/userInfo1','MemberInfoController@info');
+Route::get('memberAPi/userInfo2',['uses'=>'MemberInfoController@info']);
+
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
