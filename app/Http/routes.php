@@ -86,10 +86,16 @@ Route::get('memberAPi/userInfo3',[
     'uses'=>'MemberInfoController@info2',
     'as'=>'memberinfo'
 ]);
-Route::any('memberAPi/{id}','MemberInfoController@info3')
+Route::any('memberAPiWhere/{id}','MemberInfoController@info3')
 ->where('id', '[0-9A-Za-z]+');
 //Route::controller('feiqile','MemberInfoController');
 
+/**
+ * 输出模板
+ */
+Route::get('memberInfo/memberInfo','MemberInfoController@memberInfo');
+
+//Router::get('','MemberInfoController@memberInfo');
 /*
 |--------------------------------------------------------------------------
 | Application Routes

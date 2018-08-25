@@ -21,4 +21,12 @@ class  MemberInfoController extends Controller{
     public function info3($id){
         return 'member-info->'.$id;
     }
+
+    public function memberInfo(){
+//        return view('member_info');
+        return view('member/info',[
+            'name'=>'zhangsan',
+            'age'=>20
+        ]);
+    }
 }
