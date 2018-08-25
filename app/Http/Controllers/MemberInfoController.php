@@ -14,4 +14,11 @@ class  MemberInfoController extends Controller{
     public function info(){
         return 'member-info';
     }
+    public function info2(){
+        return route('memberinfo');
+    }
+
+    public function info3($id){
+        return 'member-info->'.$id;
+    }
 }

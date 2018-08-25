@@ -82,7 +82,13 @@ Route::get('myview', function () {
  */
 Route::get('memberAPi/userInfo1','MemberInfoController@info');
 Route::get('memberAPi/userInfo2',['uses'=>'MemberInfoController@info']);
-
+Route::get('memberAPi/userInfo3',[
+    'uses'=>'MemberInfoController@info2',
+    'as'=>'memberinfo'
+]);
+Route::any('memberAPi/{id}','MemberInfoController@info3')
+->where('id', '[0-9A-Za-z]+');
+//Route::controller('feiqile','MemberInfoController');
 
 /*
 |--------------------------------------------------------------------------
