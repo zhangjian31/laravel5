@@ -345,7 +345,7 @@ class  StudentController extends Controller
     public function section1()
     {
         $students = Student::get();
-        $students =[];
+        $students = [];
 //        return view('student/section1');
         $name = 'hellow';
         $age = 20;
@@ -356,6 +356,11 @@ class  StudentController extends Controller
             'arr' => $arr,
             'students' => $students
         ]);//推荐用法
+    }
+
+    public function urlTest()
+    {
+        return 'urlTest';
     }
 }
 /*

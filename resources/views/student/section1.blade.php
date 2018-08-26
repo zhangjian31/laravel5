@@ -77,4 +77,11 @@
     @empty
         <p>我是空的，循环啥？</p>
     @endforelse
+
+    <br>
+    <a href="{{url('url')}}">路由跳转：{{url('url')}}</a>
+    <br>
+    <a href="{{action('StudentController@urlTest')}}">路由跳转：StudentController@urlTest</a>
+    <br>
+    <a href="{{route('url')}}">路由跳转：{{route('url')}}</a>
 @stop
