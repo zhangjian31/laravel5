@@ -287,11 +287,34 @@ class  StudentController extends Controller
         /**
          * 查找，找不到创建一个，不保存
          */
-        $student=  Student::firstOrNew([
-            'name'=>'zhangsanfsdfsdfs'
+        $student = Student::firstOrNew([
+            'name' => 'zhangsanfsdfsdfs'
         ]);
         $student->save();
         dump($student);
+    }
+
+    public function orm3()
+    {
+        /**
+         * 通过模型更新数据
+         */
+//        $student = Student::find(23);
+//        dump($student);
+//        $student->name = 'abc';
+//        $bool = $student->save();
+//        dump($bool);
+
+        /**
+         * 结合查询语句批量更新
+         */
+
+       $result= Student::where('id','>',20)
+            ->update([
+                'age'=>11
+            ]);
+       dump($result);
+
     }
 }
 /*
