@@ -120,3 +120,8 @@ Route::get('query2','StudentController@query2');
 Route::get('query3','StudentController@query3');
 Route::get('query4','StudentController@query4');
 Route::get('query5','StudentController@query5');
+
+/**
+ * ORM 操作
+ */
+Route::get('orm1','StudentController@orm1');

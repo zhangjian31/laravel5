@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Student;
 use Illuminate\Support\Facades\DB;
 
 /**
@@ -206,6 +207,52 @@ class  StudentController extends Controller
         echo "<br>";
 
         $result = DB::table('student')->sum('age');
+        echo 'sum=';
+        var_dump($result);
+        echo "<br>";
+    }
+
+    public function orm1()
+    {
+//        $result = Student::all();
+//        $result = Student::find(11);//主键
+//        $result = Student::findOrFail(110);//根据主键查找，找不到报错
+
+//        $result = Student::get();
+
+//        $result = Student::where('age','>',20)
+//            ->orderBy('id','asc')
+//            ->get();
+//        dump($result);
+
+//        Student::chunk(2,function ($student){
+//            dump($student);
+//        });
+
+
+
+
+        $result = Student::count();
+        echo 'count=';
+        var_dump($result);
+        echo "<br>";
+
+        $result = Student::max('age');
+        echo 'max=';
+        var_dump($result);
+        echo "<br>";
+
+        $result = Student::where('age','>',23)->min('age');
+        echo 'min=';
+        var_dump($result);
+        echo "<br>";
+
+        $result = Student::avg('age');
+        echo 'avg=';
+        var_dump($result);
+        echo "<br>";
+
+        $result = Student::sum('age');
         echo 'sum=';
         var_dump($result);
         echo "<br>";
