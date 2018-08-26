@@ -132,4 +132,7 @@ Route::get('orm4','StudentController@orm4');
 
 Route::get('section1','StudentController@section1');
 
+
 Route::get('url',['as'=>'url','uses'=>'StudentController@urlTest']);
+
+Route::get('student/request1','StudentController@request1');

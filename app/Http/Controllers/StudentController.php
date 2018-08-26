@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Student;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 /**
@@ -361,6 +362,41 @@ class  StudentController extends Controller
     public function urlTest()
     {
         return 'urlTest';
+    }
+
+    public function request1(Request $request)
+    {
+        /**
+         * 取值
+         */
+//        if ($request->has('name')){
+//            $name= $request->input("name",'未知');
+//            echo $name;
+//        }else{
+//            echo '无此参数';
+//        }
+        /**
+         * 输出所有参数
+         */
+//        $params = $request->all();
+//        dd($params);
+
+//        $method =$request->method();
+//        dump($method);
+
+//        if($request->isMethod('GET')){
+//            echo "GET";
+//        }else{
+//            echo "OTHER";
+//        }
+
+//        $result = $request->ajax();
+//        var_dump($result);
+
+//        $url = $request->url();
+//        echo $url;
+        $result = $request->is('student/*');
+        var_dump($result);
     }
 }
 /*
