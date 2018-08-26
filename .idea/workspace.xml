@@ -26,14 +26,14 @@
         <counts>
           <entry key="env" value="2" />
           <entry key="json" value="1" />
-          <entry key="php" value="26" />
+          <entry key="php" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Blade" value="7" />
           <entry key="JSON" value="1" />
-          <entry key="PHP" value="19" />
+          <entry key="PHP" value="23" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
@@ -41,13 +41,13 @@
         <counts>
           <entry key="dummy" value="6" />
           <entry key="env" value="24" />
-          <entry key="php" value="5345" />
+          <entry key="php" value="6161" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Blade" value="1059" />
-          <entry key="PHP" value="4286" />
+          <entry key="PHP" value="5102" />
           <entry key="PLAIN_TEXT" value="30" />
         </counts>
       </usages-collector>
@@ -56,59 +56,24 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StudentController.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="397" column="39" selection-start-line="397" selection-start-column="32" selection-end-line="397" selection-end-column="39" />
-              <folding>
-                <element signature="e#40#56#0#PHP" expanded="true" />
-                <marker date="1535297198419" expanded="true" signature="647:744" ph="..." />
-              </folding>
+            <state relative-caret-position="260">
+              <caret line="142" column="24" selection-start-line="142" selection-start-column="16" selection-end-line="142" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StudentController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="128" column="24" selection-start-line="128" selection-start-column="24" selection-end-line="128" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/student/section1.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="79" lean-forward="true" selection-start-line="79" selection-end-line="79" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/student/common1.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="37" lean-forward="true" selection-start-column="37" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_8.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="840" column="9" selection-start-line="840" selection-start-column="9" selection-end-line="840" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+            <state relative-caret-position="59">
+              <caret line="488" column="52" selection-start-line="488" selection-start-column="52" selection-end-line="488" selection-end-column="52" />
+              <folding>
+                <element signature="e#40#56#0#PHP" expanded="true" />
+                <marker date="1535300571662" expanded="true" signature="687:784" ph="..." />
+                <marker date="1535300571662" expanded="true" signature="10829:10966" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,6 +87,8 @@
       <find>query1</find>
       <find>view</find>
       <find>Student::get()</find>
+      <find>section1</find>
+      <find>Session</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -145,8 +112,8 @@
         <option value="$PROJECT_DIR$/resources/views/student/common1.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/student/section1.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/StudentController.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/StudentController.php" />
       </list>
     </option>
   </component>
@@ -263,6 +230,11 @@
             <path>
               <item name="laravel5" type="b2602c69:ProjectViewProjectNode" />
               <item name="laravel5" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="laravel5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="laravel5" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -320,12 +292,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1535182890690</updated>
-      <workItem from="1535182892108" duration="31384000" />
+      <workItem from="1535182892108" duration="34525000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31384000" />
+    <option name="totallyTimeSpent" value="34525000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="272" y="23" width="1433" height="798" extended-state="0" />
@@ -467,21 +439,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StudentController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="397" column="39" selection-start-line="397" selection-start-column="32" selection-end-line="397" selection-end-column="39" />
-          <folding>
-            <element signature="e#40#56#0#PHP" expanded="true" />
-            <marker date="1535297198419" expanded="true" signature="647:744" ph="..." />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2267">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="128" column="24" selection-start-line="128" selection-start-column="24" selection-end-line="128" selection-end-column="24" />
+        <state relative-caret-position="260">
+          <caret line="142" column="24" selection-start-line="142" selection-start-column="16" selection-end-line="142" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StudentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="488" column="52" selection-start-line="488" selection-start-column="52" selection-end-line="488" selection-end-column="52" />
+          <folding>
+            <element signature="e#40#56#0#PHP" expanded="true" />
+            <marker date="1535300571662" expanded="true" signature="687:784" ph="..." />
+            <marker date="1535300571662" expanded="true" signature="10829:10966" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

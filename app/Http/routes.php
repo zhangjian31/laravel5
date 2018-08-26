@@ -136,3 +136,10 @@ Route::get('section1','StudentController@section1');
 Route::get('url',['as'=>'url','uses'=>'StudentController@urlTest']);
 
 Route::get('student/request1','StudentController@request1');
+
+
+Route::group(['middleware' => 'web'], function () {
+
+    Route::get('session1', 'StudentController@session1');
+    Route::get('session2', 'StudentController@session2');
+});

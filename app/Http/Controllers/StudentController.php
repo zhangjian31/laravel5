@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 /**
  * Created by PhpStorm.
@@ -397,6 +398,105 @@ class  StudentController extends Controller
 //        echo $url;
         $result = $request->is('student/*');
         var_dump($result);
+    }
+
+    public function session1(Request $request)
+    {
+        /**
+         * Http request session
+         */
+//        $request->session()->put('key1', 'value1');
+//        $result= $request->session()->get('key1','default_no');
+//        dump($result);
+
+        /**
+         * session()
+         */
+//        session()->put('key2','value2');
+//        $result=  session()->get('key2');
+//        echo $result;
+
+        /**
+         * 通过Session类
+         */
+//        Session::put('key3','value3');
+//        $result= Session::get('key3');
+//        echo $result;
+
+//        $result= Session::get('key4','default_no');
+//        echo $result;
+
+        /**
+         * 以数组方式设置
+         */
+//        Session::put([
+//            'key4' => 'value4',
+//            'key5' => 'value5'
+//        ]);
+//        $result = Session::get('key4');
+//        echo $result;
+//        $result = Session::get('key5');
+//        echo $result;
+
+        /**
+         * 把数据放到session数组中
+         */
+//        Session::push('stu1', 'xiaoming');
+//        Session::push('stu1', 'wangwu');
+//        $result = Session::get('stu1','default_no');
+//        dd($result) ;
+
+        /**
+         * 去除数据并删除？貌似没起作用
+         */
+//        $result = Session::pull('stu1','default_no');
+//        dd($result) ;
+
+        /**
+         * 去除所有的值
+         */
+//        $result = Session::all();
+//        dd($result) ;
+
+        /**
+         * 判断session中某个key是否存在
+         */
+//        if (Session::has('key2')) {
+//            dump(Session::all());
+//        } else {
+//            echo 'has nothing';
+//        }
+
+        /**
+         * 删除指定key的session
+         */
+//        $result = Session::all();
+//        dump($result);
+//        Session::forget('key1');
+//        $result = Session::all();
+//        dump($result);
+
+        /**
+         * 清空Session
+         */
+//        $result = Session::all();
+//        dump($result);
+//        Session::flush();
+//        $result = Session::all();
+//        dump($result);
+
+        /**
+         * 暂存数据,只能访问一次session,访问过后key就删除，即使访问的不是本key
+         */
+//        Session::flash('key_flash', 'value_flash');
+//        $result = Session::get('key_flash');
+//        dump($result);
+    }
+
+    public function session2(Request $request)
+    {
+
+
     }
 }
 /*
