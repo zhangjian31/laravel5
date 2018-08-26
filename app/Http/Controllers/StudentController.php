@@ -309,12 +309,37 @@ class  StudentController extends Controller
          * 结合查询语句批量更新
          */
 
-       $result= Student::where('id','>',20)
+        $result = Student::where('id', '>', 20)
             ->update([
-                'age'=>11
+                'age' => 11
             ]);
-       dump($result);
+        dump($result);
 
+    }
+
+    public function orm4()
+    {
+        /**
+         * 通过模型删除
+         */
+//        $result = Student::find(12);
+//        $result->delete();
+//        dump($result);
+
+        /**
+         * 通过主键删除
+         */
+//        $result = Student::destroy(13);
+//        $result = Student::destroy([14,15]);
+
+//        $result = Student::destroy(14,15);
+//        dump($result);
+
+        /**
+         * 添加删除
+         */
+        $result = Student::where('age','>',20)->delete();
+        dump($result);
     }
 }
 /*
