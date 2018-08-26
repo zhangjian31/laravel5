@@ -6,7 +6,7 @@
     <style>
         .header {
             width: 1000px;
-            height: 150px;
+            height: 100px;
             margin: 0 auto;
             background: #f5f5f5;
             border: 1px solid #ddd;
@@ -14,7 +14,7 @@
 
         .main {
             width: 1000px;
-            height: 300px;
+            height: 400px;
             margin: 0 auto;
             margin-top: 15px;
             clear: both;
@@ -38,7 +38,7 @@
 
         .footer {
             width: 1000px;
-            height: 150px;
+            height: 100px;
             margin: 0 auto;
             margin-top: 15px;
             background: #f5f5f5;
@@ -60,7 +60,7 @@
         @show
     </div>
     <div class="content">
-        @yield('content','主要内容区域');
+        @yield('content','主要内容区域')
     </div>
 </div>
 

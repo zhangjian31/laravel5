@@ -1,0 +1,1 @@
+<p>我是include子视图，提示信息：{{$message}}</p>

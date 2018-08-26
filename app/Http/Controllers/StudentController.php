@@ -345,7 +345,14 @@ class  StudentController extends Controller
     public function section1()
     {
 //        return view('student/section1');
-        return view('student.section1');//推荐用法
+        $name = 'hellow';
+        $age = 20;
+        $arr = ['hellow','world'];
+        return view('student.section1', [
+            'name' => $name,
+            'age' => $age,
+            'arr'=>$arr
+        ]);//推荐用法
     }
 }
 /*
