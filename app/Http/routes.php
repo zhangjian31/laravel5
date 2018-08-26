@@ -119,3 +119,4 @@ Route::get('query1','StudentController@query1');
 Route::get('query2','StudentController@query2');
 Route::get('query3','StudentController@query3');
 Route::get('query4','StudentController@query4');
+Route::get('query5','StudentController@query5');

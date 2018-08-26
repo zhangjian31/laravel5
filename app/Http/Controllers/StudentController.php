@@ -173,7 +173,7 @@ class  StudentController extends Controller
         DB::table('student')->chunk(1, function ($student) {
 
             static $page = 1;
-            echo "<H1>page=".$page."</H1><br>";
+            echo "<H1>page=" . $page . "</H1><br>";
             var_dump($student);
             if ($page == 3) {
                 return false;
@@ -181,6 +181,34 @@ class  StudentController extends Controller
                 $page++;
             }
         });
+    }
+
+    public function query5()
+    {
+        $result = DB::table('student')->count();
+        echo 'count=';
+        var_dump($result);
+        echo "<br>";
+
+        $result = DB::table('student')->max('age');
+        echo 'max=';
+        var_dump($result);
+        echo "<br>";
+
+        $result = DB::table('student')->min('age');
+        echo 'min=';
+        var_dump($result);
+        echo "<br>";
+
+        $result = DB::table('student')->avg('age');
+        echo 'avg=';
+        var_dump($result);
+        echo "<br>";
+
+        $result = DB::table('student')->sum('age');
+        echo 'sum=';
+        var_dump($result);
+        echo "<br>";
     }
 }
 /*
