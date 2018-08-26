@@ -61,7 +61,7 @@ class  StudentController extends Controller
             ['name' => 'name21', 'age' => 21],
             ['name' => 'name22', 'age' => 22],
             ['name' => 'name23', 'age' => 23],
-            ['name' => 'name24', 'age' => 24],
+            ['name' => 'name24', 'age' => 24]
         ]);
         dd($result);
 
@@ -71,6 +71,7 @@ class  StudentController extends Controller
 //        ]);
 //        dd($result);
     }
+
     /**
      * 查询构造器 更新数据
      */
@@ -123,6 +124,63 @@ class  StudentController extends Controller
          */
         $result = DB::table('student')->truncate();
         var_dump($result);
+    }
+
+    public function query4()
+    {
+        /**
+         * 查询所有数据
+         */
+//        $result = DB::table('student')->get();
+
+        /**
+         * 查询第一条数据
+         */
+//        $result = DB::table('student')
+//            ->orderby('age','desc')
+//            ->where('age','<',24)
+//            ->first();
+
+        /**
+         * 多条件查询
+         */
+//        $result = DB::table('student')
+//            ->orderby('age','desc')
+//            ->whereRaw('id < ? and age > ?',[13,18])
+//            ->first();
+
+        /**
+         * 返回指定字段的数组
+         */
+//        $result = DB::table('student')
+//            ->pluck('name');
+
+        /**
+         * 查询指定字段并返回id为键值的数组
+         */
+//        $result = DB::table('student')
+//            ->lists('name','id');
+
+//        $result = DB::table('student')
+//            ->select('name','age')
+//            ->get('name','id');
+//        dd($result);
+
+        /**
+         * 分页查询，return false为结束条件
+         */
+        echo '<pre>';
+        DB::table('student')->chunk(1, function ($student) {
+
+            static $page = 1;
+            echo "<H1>page=".$page."</H1><br>";
+            var_dump($student);
+            if ($page == 3) {
+                return false;
+            } else {
+                $page++;
+            }
+        });
     }
 }
 /*
