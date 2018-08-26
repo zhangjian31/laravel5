@@ -230,8 +230,6 @@ class  StudentController extends Controller
 //        });
 
 
-
-
         $result = Student::count();
         echo 'count=';
         var_dump($result);
@@ -242,7 +240,7 @@ class  StudentController extends Controller
         var_dump($result);
         echo "<br>";
 
-        $result = Student::where('age','>',23)->min('age');
+        $result = Student::where('age', '>', 23)->min('age');
         echo 'min=';
         var_dump($result);
         echo "<br>";
@@ -256,6 +254,44 @@ class  StudentController extends Controller
         echo 'sum=';
         var_dump($result);
         echo "<br>";
+    }
+
+    public function orm2()
+    {
+        /**
+         * 使用模型新增数据
+         */
+//        $student = new Student();
+//        $student->name = 'zhangsan3';
+//        $student->age = 23;
+//        $bool = $student->save();
+//        dump($bool);
+
+//       $student= Student::find(19);
+//       echo $student->created_at;
+//        echo date('Y-m-d H:i:s',$student->created_at);
+
+//        $student=  Student::create([
+//            'name'=>'xiaowang',
+//            'age'=>20
+//        ]);
+//        dump($student);
+        /**
+         * 查找，找不到创建一个并保存
+         */
+//        $student=  Student::firstOrCreate([
+//            'name'=>'zhangsan'
+//        ]);
+//        dump($student);
+
+        /**
+         * 查找，找不到创建一个，不保存
+         */
+        $student=  Student::firstOrNew([
+            'name'=>'zhangsanfsdfsdfs'
+        ]);
+        $student->save();
+        dump($student);
     }
 }
 /*
