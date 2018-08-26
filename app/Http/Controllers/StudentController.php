@@ -344,14 +344,17 @@ class  StudentController extends Controller
 
     public function section1()
     {
+        $students = Student::get();
+        $students =[];
 //        return view('student/section1');
         $name = 'hellow';
         $age = 20;
-        $arr = ['hellow','world'];
+        $arr = ['hellow', 'world'];
         return view('student.section1', [
             'name' => $name,
             'age' => $age,
-            'arr'=>$arr
+            'arr' => $arr,
+            'students' => $students
         ]);//推荐用法
     }
 }

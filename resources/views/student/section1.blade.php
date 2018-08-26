@@ -37,5 +37,44 @@
 
     {{--引入子视图--}}
 
+    {{--include--}}
     @include('student.common1',['message'=>'请检查网络'])
+
+    {{--流程控制--}}
+    <br>
+    @if($name=='hellow')
+        你好
+    @elseif($name=='world')
+        世界
+    @else
+        什么？
+    @endif
+
+    <br>
+    @if(in_array($name,$arr))
+        true
+    @else
+        false
+    @endif
+
+    <br>
+    @unless($name!='hellow')
+        我和if是相反的
+    @endunless
+
+    <br>
+    {{--@for($i=0;$i<3;$i++)--}}
+        {{--<p>{{$i}}</p>--}}
+    {{--@endfor--}}
+    <br>
+
+    {{--@foreach($students as $stu)--}}
+        {{--<p>{{$stu->name}} {{$stu->age}} {{$stu->sex}}</p>--}}
+    {{--@endforeach--}}
+    <br>
+    @forelse($students as $stu)
+        <p>{{$stu->name}} {{$stu->age}} {{$stu->sex}}</p>
+    @empty
+        <p>我是空的，循环啥？</p>
+    @endforelse
 @stop

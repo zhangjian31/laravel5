@@ -14,7 +14,7 @@
 
         .main {
             width: 1000px;
-            height: 400px;
+            height: 500px;
             margin: 0 auto;
             margin-top: 15px;
             clear: both;
