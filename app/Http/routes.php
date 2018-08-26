@@ -128,3 +128,6 @@ Route::get('orm1','StudentController@orm1');
 Route::get('orm2','StudentController@orm2');
 Route::get('orm3','StudentController@orm3');
 Route::get('orm4','StudentController@orm4');
+
+
+Route::get('section1','StudentController@section1');

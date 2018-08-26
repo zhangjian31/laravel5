@@ -338,8 +338,14 @@ class  StudentController extends Controller
         /**
          * 添加删除
          */
-        $result = Student::where('age','>',20)->delete();
+        $result = Student::where('age', '>', 20)->delete();
         dump($result);
+    }
+
+    public function section1()
+    {
+//        return view('student/section1');
+        return view('student.section1');//推荐用法
     }
 }
 /*
